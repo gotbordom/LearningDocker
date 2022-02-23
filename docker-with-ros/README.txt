@@ -8,6 +8,11 @@ docker build -t ros2-foxy-tutorial-docker .
 # while the -d flag creates this in "detached mode" it will run in the background
 docker run --name Ros2_Foxy_Docker -dp 90:90 ros2-foxy-tutorial-docker
 
+# another useful one is:
+# this will clean up the container once it is done doing what it needs to
+docker run -dit --rm <image name>
+
+
 # Useful commands:
 
 docker ps                            # Will lost all containers
