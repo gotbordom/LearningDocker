@@ -17,7 +17,7 @@ docker run -dit --rm <image name>
 
 docker ps                            # Will lost all containers
 docker container ls                  # Same as above
-docker exec -ti Simple_Instance bash # Will create a bash instance to explore the container
+docker exec -ti <ContainerName>  bash # Will create a bash instance to explore the container
 
 # Warnings / Errors / etc
 1. WARNING: apt get does not have a stable CLI interface. Use with caution in scripts.
