@@ -1,4 +1,4 @@
-FROM nvidia/cudagl:11.1.1-base-ubuntu20.04
+FROM nvidia/cudagl:11.4.2-base-ubuntu20.04
  
 # Minimal setup
 RUN apt-get update \

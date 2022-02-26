@@ -1,3 +1,7 @@
+Setup
+1. Follow installation steps for nvidia container toolkit
+   a. https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html#docker
+
 There is a lot to this learning directory from the others.
 
 1. This shows how we can create images ontop of images we already made.
