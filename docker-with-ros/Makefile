@@ -22,6 +22,7 @@ define help-text
 	docker-down                     TODO (AT) - see docker-up
 	help				...
 	run				...
+	stop				...
 endef
 
 
@@ -49,3 +50,11 @@ run:
 	                -p 1080:1080							\
 			--name ${CONTAINER_NAME} ${REGISTRY}/${IMAGE}:${VERSION_TAG}	\
 			bash #${PATH_TO_ROS}/${ROS_EXE} for now we will be using run as a dev container.
+
+.PHONY: stop
+stop:
+	if [ "$$(docker ps -a -q -f name=${CONTAINER_NAME})" != "" ];			\
+	then 										\
+		docker stop ${CONTAINER_NAME} && docker rm -f ${CONTAINER_NAME};	\
+	fi
+
