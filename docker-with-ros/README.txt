@@ -12,13 +12,19 @@ docker run --name Ros2_Foxy_Docker -dp 90:90 ros2-foxy-tutorial-docker
 # this will clean up the container once it is done doing what it needs to
 docker run -dit --rm <image name>
 
+# Using the make commands
+make build  # creates a docker image
+make run    # creates the container
+make bash   # opens a bash shell in the container
 
 # Useful commands:
 
-docker ps                            # Will lost all containers
-docker container ls                  # Same as above
+docker ps -a                          # Will list all containers
 docker exec -ti <ContainerName>  bash # Will create a bash instance to explore the container
 
 # Warnings / Errors / etc
 1. WARNING: apt get does not have a stable CLI interface. Use with caution in scripts.
    - This just means swap out all the apt calls for apt-get calls
+
+
+# 
