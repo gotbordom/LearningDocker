@@ -46,7 +46,7 @@ build:
 .PHONY: run
 run:
 	@docker run	-d -it								\
-			-v ${REPOS_DIR}:/repos						\
+			-v ${REPOS_DIR}:/repos:Z					\
 	                -p 1080:1080							\
 			--name ${CONTAINER_NAME} ${REGISTRY}/${IMAGE}:${VERSION_TAG}	\
 			bash #${PATH_TO_ROS}/${ROS_EXE} for now we will be using run as a dev container.
